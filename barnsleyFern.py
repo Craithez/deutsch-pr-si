@@ -1,19 +1,15 @@
-# -*- coding: utf-8 -*-
 """
 BARNSLEY FERN
 
 By: it's literally monique
 """
 
-# import libraries needed for program
 import matplotlib.pyplot as plt 
 from random import randint 
   
-#initialize list & set first values to 1
 x = [0] 
 y = [0] 
 
-# create the barnsley fractal by creating the points on the scatterplot
 for i in range(0, 50000): 
   
     z = randint(1, 100) 
@@ -34,7 +30,7 @@ for i in range(0, 50000):
         x.append(-0.15*(x[i]) + 0.28*(y[i])) 
         y.append(0.26*(x[i]) + 0.24*(y[i])+0.44) 
 
-# make and show the scatterplot
+
 plt.scatter(x, y, s = 0.2, c ='#5dbb63') 
 plt.axis("off")
 plt.savefig('barnsley_fern.png', dpi=300, bbox_inches='tight')
